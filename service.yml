@@ -1,0 +1,14 @@
+---
+api Version: v1
+kind: Service
+metadata:
+   name: busapp-service
+spec:
+   type: NodePort
+   ports:
+   - targetPort: 90
+      port: 80
+      nodePort: 30002
+      protocol: TCP
+selector:
+   app: frontend
