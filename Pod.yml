@@ -1,14 +1,14 @@
----
-api Version: v1
+apiVersion: v1
 kind: Pod
 metadata:
-    name: busapp-pod
-    labels:
-       app: frontend
-spec: 
-    containers: 
-       - name: busapp-container
-         image: busap
-         ports:
-          -name: busapp-port
-           containerPort: 3000
+  name: busapp-pod
+  labels:
+     app: frontend
+     project: infinity
+spec:
+  containers:
+    - name: busapp-container
+      image: kyrosbus
+      imagePullPolicy: Always
+      ports:
+        - containerPort: 3000
