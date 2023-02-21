@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: busapp-repica
+  labels:
+    app: frontend
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend
+    spec:
+      containers:
+      - name: busapp-container
+        image: busa
