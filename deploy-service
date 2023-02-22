@@ -28,6 +28,6 @@ spec:
     spec:
       containers:
         - name: busapp-container
-          image: ananddocker18/busapp:latest
+          image: ananddocker18/mybus:latest
           ports:
             - containerPort: 3000
