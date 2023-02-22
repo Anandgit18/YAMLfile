@@ -29,6 +29,5 @@ spec:
       containers:
         - name: busapp-container
           image: ananddocker18/busapp:latest
-          imagePullPolicy: Always
           ports:
             - containerPort: 3000
