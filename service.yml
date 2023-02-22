@@ -4,7 +4,8 @@ metadata:
   name: busapp-service
 spec:
   ports:
-    - targetPort: 3000
+    - Port: 30002
+      targetPort: 3000
       nodePort: 30002
       protocol: TCP
   type: NodePort
