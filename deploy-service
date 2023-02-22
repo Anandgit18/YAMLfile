@@ -3,14 +3,14 @@ kind: Service
 metadata:
   name: busapp-service
 spec:
-  ports:
-    - Port: 30002
-      targetPort: 3000
-      nodePort: 30002
-      protocol: TCP
-  type: NodePort
   selector:
     app: frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+      nodePort: 30005
+  type: NodePort
 ---
 apiVersion: apps/v1
 kind: Deployment
