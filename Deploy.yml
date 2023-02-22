@@ -1,21 +1,20 @@
----
-api Version: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: busapp-deploy
-spec: 
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend
   template:
     metadata:
       labels:
         app: frontend
     spec:
       containers:
-      - name: busapp-container
-        image: busap
-        ports:
-        - name: busapp-port
-          containerPort: 90
-  replicas: 3
-  selector:
-    matchlabels:
-      app: frontend
+        - name: busapp-container
+          image: ananddocker18/busapp:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
