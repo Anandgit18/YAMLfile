@@ -30,3 +30,4 @@ spec:
           image: ananddocker18/mybus:latest
           ports:
             - containerPort: 3000
+              protocol: TCP
